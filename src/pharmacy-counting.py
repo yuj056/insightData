@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[36]:
+# In[6]:
 
 #read txt file
 with open('itcont.txt', "r") as f:
@@ -35,4 +35,7 @@ for name, cost in newCombinedList.iteritems():
     
 # sort the list by decend order of drug cost    
 new_list = sorted(dictlist, reverse=True,key = lambda x: x[2])
+with open('top_cost_drug.txt', 'w') as filehandle:  
+    for listitem in new_list:
+        filehandle.write('%s\n' % listitem)
 
