@@ -1,1 +1,1 @@
-This is the directory where your source code would reside.
+In the .py file, the python code was empolyed to sort the txt file by the drug cost in decending order. Besides, the drug with same drug name are merged the cost and the numbers are showned in number of prescriber. No external package was import. 
