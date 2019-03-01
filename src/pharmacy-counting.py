@@ -4,7 +4,9 @@
 # In[6]:
 
 #read txt file
-with open('itcont.txt', "r") as f:
+import os             
+files = os.listdir("input/") 
+with open(files, "r") as f:
     data = f.readlines()
     
 #extract drug_name and drug_cost
@@ -35,7 +37,7 @@ for name, cost in newCombinedList.iteritems():
     
 # sort the list by decend order of drug cost    
 new_list = sorted(dictlist, reverse=True,key = lambda x: x[2])
-with open('top_cost_drug.txt', 'w') as filehandle:  
+with open('output/top_cost_drug.txt', 'w') as filehandle:  
     for listitem in new_list:
         filehandle.write('%s\n' % listitem)
 
